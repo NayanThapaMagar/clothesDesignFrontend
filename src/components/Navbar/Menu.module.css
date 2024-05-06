@@ -1,0 +1,46 @@
+.Menu {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 91vh;
+  background-color: #000000;
+}
+
+ul.MenuContent {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 91.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.MenuContent li {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 20px;
+}
+
+
+.MenuContent li:hover {
+  background-color: #60666db0;
+  cursor: pointer;
+}
+.MenuContent li a {
+  text-decoration: none;
+  color: #cbe7ff;
+}
+
+
+
+
+
+
+
+
+

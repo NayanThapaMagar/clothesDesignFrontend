@@ -1,0 +1,23 @@
+
+.icons{
+    background-color: rgb(110, 108, 108);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 6vh;
+}
+
+.account {
+    height: 35px;
+    width: 35px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.menuIcon:hover {
+    cursor: pointer;
+}
+
+.account:hover {
+    cursor: pointer;
+}

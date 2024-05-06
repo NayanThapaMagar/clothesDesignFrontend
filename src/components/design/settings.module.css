@@ -1,0 +1,12 @@
+
+.colorOptions {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    gap: 50px;
+}
+
+.colorOption:hover {
+    height: 105px;
+    width: 110px;
+}
