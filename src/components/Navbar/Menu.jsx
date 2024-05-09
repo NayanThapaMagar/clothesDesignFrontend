@@ -12,6 +12,7 @@ export const Menu = (props) => {
                 <li><Link to="/" onClick={() => props.setMenu(false)}>Home</Link></li>
                 <li><Link>About Us</Link></li>
                 <li><Link to="/contactUs" onClick={() => props.setMenu(false)}>Contact Us</Link></li>
+                <li><Link to="/contacts" onClick={() => props.setMenu(false)}>Contacts</Link></li>
             </ul>
         </div>
     );

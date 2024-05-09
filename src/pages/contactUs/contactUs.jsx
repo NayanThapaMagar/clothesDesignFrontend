@@ -27,7 +27,7 @@ export const ContactUs = () => {
             .then(() => {
                 // console.log(res);
                 // setLoading(false);
-                navigate('/');
+                navigate('/contacts');
             })
             .catch((error) => {
                 // setLoading(false);
