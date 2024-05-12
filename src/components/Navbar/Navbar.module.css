@@ -1,6 +1,7 @@
+@import "../../vars.css";
 
 .icons{
-    background-color: rgb(110, 108, 108);
+    background-color: var(--color-top);
     display: flex;
     justify-content: space-between;
     padding: 10px;

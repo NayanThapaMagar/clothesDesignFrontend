@@ -7,7 +7,7 @@
     height: 91vh;
 }
 
-@keyframes pulse {
+/* @keyframes pulse {
     0% {
         color: rgb(84, 210, 191);
     }
@@ -27,82 +27,100 @@
     100% {
         color: rgb(66, 221, 125);
     }
-}
+} */
+
 
 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.title a {
     text-decoration: none;
 }
 
 .title h1 {
+    width: 300px;
     margin: 0;
     padding: 0px;
     font-size: 100px;
     margin-bottom: 25px;
-    animation: pulse 3s infinite;
+    /* animation: pulse 3s infinite; */
+    background: linear-gradient(to right, var(--btncolor-1), var(--btncolor-2), var(--btncolor-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .buttons {
     display: grid;
-    gap: 25px;
+    gap: 30px;
     font-weight: bold;
     padding: 10px 20px;
 }
 
 
 .button1 {
-    border: 5px solid  var(--btncolor-r);
+    border: 5px solid var(--btncolor-1);
     font-size: 30px;
     font-weight: bold;
-    color: var(--btncolor-r);
-    background-color: transparent;
+    /* color: white; */
+    color: var(--color-text-1);
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 20px;
     text-decoration: none;
     text-align: center;
+    background-color: var(--btncolor-1);
+    box-shadow: 5px 5px 10px var(--btncolor-1);
 }
 
 .button1:hover {
-    background-color: var(--btncolor-r);
-    color: #fff;
+    background-color: transparent;
+    /* color: #fff; */
 }
 
 .button2 {
-    border: 5px solid var(--btncolor-y);
+    border: 5px solid var(--btncolor-2);
     font-size: 30px;
     font-weight: bold;
-    color: var(--btncolor-y);
-    background-color: transparent;
+    /* color: white; */
+    color: var(--color-text-1);
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 20px;
     text-decoration: none;
     text-align: center;
+    background-color: var(--btncolor-2);
+    box-shadow: 5px 5px 10px var(--btncolor-2);
 }
 
 .button2:hover {
-    background-color: var(--btncolor-y);
-    color: #fff;
+    background-color: transparent;
+    /* color: #fff; */
 }
 
 .button3 {
-    border: 5px solid var(--btncolor-g);
+    border: 5px solid var(--btncolor-3);
     font-size: 30px;
     font-weight: bold;
-    color: var(--btncolor-g);
-    background-color: transparent;
+    /* color: white; */
+    color: var(--color-text-1);
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 20px;
     text-decoration: none;
     text-align: center;
+    background-color: var(--btncolor-3);
+    box-shadow: 5px 5px 10px var(--btncolor-3);
 }
 
 .button3:hover {
-    background-color: var(--btncolor-g);
-    color: #fff;
+    background-color: transparent;
+    /* color: #fff; */
 }

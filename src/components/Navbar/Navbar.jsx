@@ -22,14 +22,17 @@ export const Navbar = () => {
                     }
 
                 </div>
-                <div className={styles.account} onClick={() => {
+                {/* <div>
+                    <h1>PUNK</h1>
+                </div> */}
+                {/* <div className={styles.account} onClick={() => {
                     setAccount(!account)
                     setMenu(false)
                 }}>
-                </div>
+                </div> */}
             </div>
             {
-                menu ? <Menu setMenu = {setMenu} /> : null
+                menu ? <Menu setMenu={setMenu} /> : null
             }
             {
                 account ? <Account /> : null

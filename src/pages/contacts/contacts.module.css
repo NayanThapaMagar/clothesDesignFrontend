@@ -12,6 +12,19 @@
 
 }
 
+.root h1 {
+    background: linear-gradient(to right, var(--btncolor-1), var(--btncolor-2), var(--btncolor-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+    margin: 15px;
+}
+
+.spinner {
+    margin: 50px;
+}
+
 table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -20,7 +33,7 @@ table {
 
 table td,
 table th {
-    border: 1px solid #ddd;
+    border: 1px solid #797676;
     padding: 8px;
     min-width: 8em;
 }
@@ -37,6 +50,6 @@ table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #606b8d;
+    background-color: var(--color-top);
     color: white;
 }

@@ -6,11 +6,13 @@ export const Punk = () => {
 
     return (
         <section className={styles.root}>
-            <Link to="/" className={styles.title}>
-                <h1>
-                    PUNK
-                </h1>
-            </Link>
+            <div className={styles.title}>
+                <Link to="/">
+                    <h1>
+                        PUNK
+                    </h1>
+                </Link>
+            </div>
             <div className={styles.buttons}>
                 <Link to="/Design1" className={styles.button1}>
                     Create T-Shirt
