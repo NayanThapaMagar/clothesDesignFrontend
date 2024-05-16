@@ -13,6 +13,7 @@ export const Menu = (props) => {
                 <li><Link>About Us</Link></li>
                 <li><Link to="/contactUs" onClick={() => props.setMenu(false)}>Contact Us</Link></li>
                 <li><Link to="/contacts" onClick={() => props.setMenu(false)}>Contacts</Link></li>
+                <li><Link to="/mail" onClick={() => props.setMenu(false)}>Mail Content</Link></li>
             </ul>
         </div>
     );

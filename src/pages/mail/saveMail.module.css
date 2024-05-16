@@ -1,0 +1,73 @@
+@import "../../vars.css";
+
+.root {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    color: #ffffff;
+    height: 91vh;
+
+}
+
+.root h1 {
+    background: linear-gradient(to right, var(--btncolor-1), var(--btncolor-2), var(--btncolor-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    margin: 0;
+}
+
+.fromContainer {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.fromContainer input {
+    width: 70%;
+    height: 4vh;
+}
+
+.fromContainer label {
+    padding: 10px 0;
+}
+
+input[type="file"]{
+    display: none;
+}
+.imageInput {
+    width: 70%;
+    height: 3vh;
+    background-color: #ffffff;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.fromContainer button {
+    border: 5px solid var(--btncolor-1);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-text-1);
+    width: 70%;
+    padding: 5px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--btncolor-1);
+    box-shadow: 3px 3px 5px var(--btncolor-1);
+}
+
+.fromContainer button:hover {
+    background-color: transparent;
+}
