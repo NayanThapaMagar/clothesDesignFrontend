@@ -92,7 +92,6 @@ export const ContactUs = () => {
                         </select>
 
                         <button type="submit">Submit</button>
-                        {/* <button onClick={handleSaveContactUs}>Submit</button> */}
                     </form>
                 </>
             }

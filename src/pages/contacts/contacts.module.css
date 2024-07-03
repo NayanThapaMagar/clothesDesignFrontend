@@ -53,3 +53,24 @@ table th {
     background-color: var(--color-top);
     color: white;
 }
+
+.button {
+    border: 5px solid var(--btncolor-1);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-text-1);
+    width: 350px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--btncolor-1);
+    box-shadow: 3px 3px 5px var(--btncolor-1);
+}
+
+.button:hover {
+    background-color: transparent;
+}
