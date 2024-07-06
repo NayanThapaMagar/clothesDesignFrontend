@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
-// import { useMemo } from 'react'
 import styles from "./contacts.module.css"
 import { useNavigate } from "react-router-dom"
+import Modal from '../../components/contactsModal/modal'
 import { COLUMNS } from "../../components/tableColumns/contactsColumns"
 
 import { useEffect, useState } from "react"
@@ -14,6 +14,8 @@ import axios from "axios"
 export const Contacts = () => {
   const [contacts, setContacts] = useState([])
   const [loading, setLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [name, setName] = useState('');
 
   const navigate = useNavigate();
 
@@ -32,10 +34,6 @@ export const Contacts = () => {
 
   }, [])
 
-  // const columns = useMemo(() => COLUMNS, [])
-  // // eslint-disable-next-line react-hooks/exhaustive-deps
-  // const data = useMemo(() => contacts, [])
-  // // const columns = useMemo(() => COLUMNS, [])
 
   const tableInstance = useTable({
     columns: COLUMNS,
@@ -50,7 +48,8 @@ export const Contacts = () => {
     prepareRow,
   } = tableInstance
 
-  const handleSaveMail = () => {
+
+  const handleSendMail = () => {
     setLoading(true);
     // Extracting Emails to mailList
     const mailList = contacts.map(contact => contact.Email);
@@ -69,13 +68,18 @@ export const Contacts = () => {
       })
   }
 
+  const handleDescription = (value) => {
+    setIsVisible(true)
+    setName(value)
+  }
+
   const override = {
     display: "block",
     margin: "300px",
   };
 
   return (
-    <div className={styles.root}>
+    <div className={styles.root} >
       {
         loading ? <FadeLoader
           color={'#0ea6e9'}
@@ -99,24 +103,39 @@ export const Contacts = () => {
               </thead>
               <tbody {...getTableBodyProps()}>
                 {rows.map((row) => {
-                  prepareRow(row)
+                  prepareRow(row);
                   return (
                     <tr {...row.getRowProps()}>
-                      {row.cells.map((cell) => {
-                        return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                      {row.cells.map((cell, cellIndex) => {
+                        // Checking if the cell is the first column (i.e., "Name" column)
+                        if (cellIndex === 0) {
+                          return (
+                            <td {...cell.getCellProps()}>
+                              <span onClick={() => handleDescription(cell.value)}>
+                                {cell.render('Cell')}
+                              </span>
+                            </td>
+                          );
+                        }
+                        return (
+                          <td {...cell.getCellProps()}>
+                            {cell.render('Cell')}
+                          </td>
+                        );
                       })}
                     </tr>
-                  )
-                })
-                }
-
+                  );
+                })}
               </tbody>
             </table>
           </div>
-          <button className={styles.button} onClick={handleSaveMail}>Send Mail</button>
+          <button className={styles.button} onClick={handleSendMail}>Send Mail</button>
         </>
       }
-
+      {isVisible && <Modal
+        name={name}
+        onClose={() => setIsVisible(false)}
+      />}
     </div>
   )
 }

@@ -1,0 +1,57 @@
+@import "../../vars.css";
+
+.root {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainer {
+    color: var(--color-text-1);
+    background-color: var(--color-top);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.closeBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fromContainer {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fromContainer h2 {
+    margin: 0;
+}
+.fromContainer textarea {
+    background-color: #dee3f0;
+}
+
+.fromContainer button {
+    border: 5px solid var(--btncolor-1);
+    font-size: 20px;
+    padding: 5px 20px;
+    color: var(--color-text-1);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--btncolor-1);
+    box-shadow: 3px 3px 5px var(--btncolor-1);
+}
+
+.fromContainer button:hover {
+    background-color: transparent;
+}

@@ -11,6 +11,12 @@
     height: 91vh;
 
 }
+.wholeContainer {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .root h1 {
     background: linear-gradient(to right, var(--btncolor-1), var(--btncolor-2), var(--btncolor-3));
@@ -35,15 +41,19 @@ table td,
 table th {
     border: 1px solid #797676;
     padding: 8px;
-    min-width: 8em;
+    width: 10em;
 }
 
 /* table tr:nth-child(even) {
     background-color: #676363;
 } */
+/* table tr {
+    background-color: #676363;
+} */
 
 table tr:hover {
     background-color: #3b3838;
+    cursor: pointer;
 }
 
 table th {
