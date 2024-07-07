@@ -16,6 +16,7 @@ export const Contacts = () => {
   const [loading, setLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   const navigate = useNavigate();
 
@@ -33,7 +34,6 @@ export const Contacts = () => {
       })
 
   }, [])
-
 
   const tableInstance = useTable({
     columns: COLUMNS,
@@ -70,7 +70,8 @@ export const Contacts = () => {
 
   const handleDescription = (value) => {
     setIsVisible(true)
-    setName(value)
+    setName(value.Name)
+    setEmail(value.Email)
   }
 
   const override = {
@@ -107,19 +108,11 @@ export const Contacts = () => {
                   return (
                     <tr {...row.getRowProps()}>
                       {row.cells.map((cell, cellIndex) => {
-                        // Checking if the cell is the first column (i.e., "Name" column)
-                        if (cellIndex === 0) {
-                          return (
-                            <td {...cell.getCellProps()}>
-                              <span onClick={() => handleDescription(cell.value)}>
-                                {cell.render('Cell')}
-                              </span>
-                            </td>
-                          );
-                        }
                         return (
-                          <td {...cell.getCellProps()}>
-                            {cell.render('Cell')}
+                          <td {...cell.getCellProps()} >
+                            <span onClick={cellIndex === 0 ? () => handleDescription(row.values) : undefined}>
+                              {cell.render('Cell')}
+                            </span>
                           </td>
                         );
                       })}
@@ -128,12 +121,15 @@ export const Contacts = () => {
                 })}
               </tbody>
             </table>
+
+
           </div>
           <button className={styles.button} onClick={handleSendMail}>Send Mail</button>
         </>
       }
       {isVisible && <Modal
         name={name}
+        email={email}
         onClose={() => setIsVisible(false)}
       />}
     </div>

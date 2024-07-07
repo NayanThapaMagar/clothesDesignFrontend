@@ -35,7 +35,9 @@
     margin: 0;
 }
 .fromContainer textarea {
-    background-color: #dee3f0;
+    /* background-color: #ffffff; */
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .fromContainer button {

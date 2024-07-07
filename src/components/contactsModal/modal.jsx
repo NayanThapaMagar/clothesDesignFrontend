@@ -3,7 +3,7 @@ import { useRef } from "react";
 import styles from "./modal.module.css"
 import { X } from 'lucide-react';
 
-function Modal({ name, onClose }) {
+function Modal({ name, email, onClose }) {
     const modelRef = useRef();
 
     const closeModal = (e) => {
@@ -11,7 +11,7 @@ function Modal({ name, onClose }) {
             onClose();
         }
     }
-    
+    console.log(email);
     return (
         <div ref={modelRef} onClick={closeModal} className={styles.root}>
             <div className={styles.modalContainer}>
