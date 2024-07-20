@@ -1,0 +1,86 @@
+.root {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    height: 91vh;
+    overflow-y: scroll;
+}
+
+.root h1 {
+    background: linear-gradient(to right, var(--btncolor-1), var(--btncolor-2), var(--btncolor-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+.prizeContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.prizeContainer input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.prizeContainer input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    margin-right: 10px;
+}
+
+.addButton,
+.removeButton,
+.submitButton {
+    padding: 10px 20px;
+    background-color: var(--btncolor-1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.addButton:hover,
+.removeButton:hover,
+.submitButton:hover {
+    background-color: #1f627f;
+}
+
+.removeButton {
+    background-color: #dc3545;
+}
+
+.removeButton:hover {
+    background-color: #c82333;
+}
+
+button[type="submit"] {
+    align-self: center;
+    margin-top: 20px;
+}

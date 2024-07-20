@@ -1,0 +1,114 @@
+.root {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    height: 91vh;
+    /* background: #333; */
+}
+
+.root h1 {
+    background: linear-gradient(to right, var(--btncolor-1), var(--btncolor-2), var(--btncolor-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.settings {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .spinBtn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.1em;
+    border: 3px solid rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.container .pointer {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 30px;
+    background: #171717;
+    clip-path: polygon(75% 0, 25% 0, 50% 100%);
+    z-index: 1;
+}
+
+.container .wheel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #333,
+        0 0 0 15px #fff,
+        0 0 0 18px #111;
+    transition: transform 5s ease-in-out;
+}
+
+.container .wheel .segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc((360deg / var(--num-prizes)) * var(--i) + 45deg));
+    clip-path: polygon(0 0, calc(var(--clipCorodinate) * 1%)0, 100% 100%, 0 calc(var(--clipCorodinate) * 1%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.container .wheel .segment span {
+    position: absolute;
+    transform: rotate(45deg);
+    color: #fff;
+    text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
+    /* writing-mode: vertical-rl; */
+    text-orientation: mixed;
+    font-size: 15px;
+}
+
+.prize {
+    margin-top: 20px;
+    color: white;
+}

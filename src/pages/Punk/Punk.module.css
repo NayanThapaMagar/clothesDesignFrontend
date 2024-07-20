@@ -3,32 +3,8 @@
 .root {
     position: relative;
     z-index: 1;
-    /* width: 100%; */
     height: 91vh;
 }
-
-/* @keyframes pulse {
-    0% {
-        color: rgb(84, 210, 191);
-    }
-
-    25% {
-        color: red;
-    }
-
-    50% {
-        color: rgb(48, 154, 168);
-    }
-
-    75% {
-        color: rgb(89, 62, 171);
-    }
-
-    100% {
-        color: rgb(66, 221, 125);
-    }
-} */
-
 
 .title {
     display: flex;
@@ -66,7 +42,6 @@
     border: 5px solid var(--btncolor-1);
     font-size: 30px;
     font-weight: bold;
-    /* color: white; */
     color: var(--color-text-1);
     padding: 10px 20px;
     cursor: pointer;
@@ -80,14 +55,12 @@
 
 .button1:hover {
     background-color: transparent;
-    /* color: #fff; */
 }
 
 .button2 {
     border: 5px solid var(--btncolor-2);
     font-size: 30px;
     font-weight: bold;
-    /* color: white; */
     color: var(--color-text-1);
     padding: 10px 20px;
     cursor: pointer;
@@ -101,14 +74,12 @@
 
 .button2:hover {
     background-color: transparent;
-    /* color: #fff; */
 }
 
 .button3 {
     border: 5px solid var(--btncolor-3);
     font-size: 30px;
     font-weight: bold;
-    /* color: white; */
     color: var(--color-text-1);
     padding: 10px 20px;
     cursor: pointer;
@@ -122,5 +93,4 @@
 
 .button3:hover {
     background-color: transparent;
-    /* color: #fff; */
 }
