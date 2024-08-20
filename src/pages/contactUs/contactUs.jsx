@@ -26,7 +26,6 @@ export const ContactUs = () => {
         setLoading(true)
         axios.post('http://localhost:5555/contactUs', data)
             .then(() => {
-                // console.log(res);
                 setLoading(false);
                 navigate('/contacts');
             })
@@ -95,8 +94,6 @@ export const ContactUs = () => {
                     </form>
                 </>
             }
-
-
         </div >
     )
 }

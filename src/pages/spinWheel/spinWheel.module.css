@@ -1,3 +1,5 @@
+@import "../../vars.css";
+
 .root {
     position: relative;
     z-index: 1;
@@ -11,28 +13,48 @@
 }
 
 .root h1 {
-    background: linear-gradient(to right, var(--btncolor-1), var(--btncolor-2), var(--btncolor-3));
+    background: linear-gradient(to right, var(--textcolor-1), var(--textcolor-2), var(--textcolor-3));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 50px;
+    font-size: 3em;
     text-align: center;
-    font-size: 50px;
+    margin: 0;
 }
 
-.settings {
+.customer {
+    font-family: 'Arial, sans-serif';
+    font-size: 1.5em;
+    color: var(--textcolor-2);
+    font-weight: bold;
+    text-align: center;
+    margin: 1.5em;
+    padding: 0.5em;
+    background-color: #E8F5E9;
+    border: 2px solid var(--textcolor-2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.customer:hover {
+    transform: scale(1.05);
+    background-color: #C8E6C9;
+}
+
+/* .settings {
     position: absolute;
     top: 15px;
     left: 15px;
     height: 35px;
     width: 35px;
     cursor: pointer;
-}
+} */
 
 .container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 335px;
+    height: 335px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,12 +125,120 @@
     transform: rotate(45deg);
     color: #fff;
     text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
-    /* writing-mode: vertical-rl; */
     text-orientation: mixed;
     font-size: 15px;
 }
 
-.prize {
+.text {
+    font-family: 'Arial, sans-serif';
+    font-size: 1.5em;
+    color: var(--textcolor-1);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 1.5em 0;
+    padding: 0.5em;
+    background-color: #FFF3E0;
+    border: 2px solid var(--textcolor-1);
+    ;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* congrulations message */
+
+.screenShotContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.congrulationsMsg {
+    font-family: 'Arial, sans-serif';
+    background-color: #ffffff;
+    border: 2px solid var(--textcolor-1);
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.prizeWon {
+    color: var(--textcolor-1);
+    font-size: 2em;
+    font: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.message {
+    color: #333;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.screenShotButton {
+    border: 5px solid var(--btncolor-1);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-text-1);
+    width: 70%;
+    padding: 5px 20px;
     margin-top: 20px;
-    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--btncolor-1);
+    box-shadow: 3px 3px 5px var(--btncolor-1);
+}
+
+.screenShotButton:hover {
+    background-color: transparent;
+}
+
+
+/* CSS for expiryMsg component */
+
+.expiryMsg {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--textcolor-1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: var(--textcolor-1);
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.message2 {
+    margin: 30px;
+    font-size: 20px;
 }

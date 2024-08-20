@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export const SpinWheelSettings = () => {
   const navigate = useNavigate();
-  const [prizes, setPrizes] = useState([]);
+  const [prizesArray, setPrizesArray] = useState([]);
 
   useEffect(() => {
     // Fetch existing prize data from the database
@@ -13,10 +13,10 @@ export const SpinWheelSettings = () => {
       .then((res) => {
         if (res.data.existingPrizes) {
           const existingPrizes = res.data.existingPrizes.prizes;
-          setPrizes(existingPrizes);
+          setPrizesArray(existingPrizes);
         } else {
           const additionalPrizes = Array(4).fill({ prize: '', color: '#000000' });
-          setPrizes([...additionalPrizes]);
+          setPrizesArray([...additionalPrizes]);
         }
       })
       .catch((error) => {
@@ -26,32 +26,32 @@ export const SpinWheelSettings = () => {
   }, []);
 
   const handlePrizeChange = (index, field, value) => {
-    const newPrizes = prizes.map((prize, i) => (
+    const newPrizesArray = prizesArray.map((prize, i) => (
       i === index ? { ...prize, [field]: value } : prize
     ));
-    setPrizes(newPrizes);
+    setPrizesArray(newPrizesArray);
   };
 
   const addPrizeField = () => {
-    if (prizes.length < 16) {
-      setPrizes([...prizes, { prize: '', color: '#000000' }]);
+    if (prizesArray.length < 16) {
+      setPrizesArray([...prizesArray, { prize: '', color: '#000000' }]);
     }
   };
 
   const removePrizeField = (index) => {
-    if (prizes.length > 4) {
-      setPrizes(prizes.filter((_, i) => i !== index));
+    if (prizesArray.length > 4) {
+      setPrizesArray(prizesArray.filter((_, i) => i !== index));
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
-      prizesArray: prizes
+      prizesArray: prizesArray
     }
     axios.post('http://localhost:5555/spinWheelSettings/savePrizes', data)
       .then(() => {
-        navigate('/spinWheel');
+        navigate('/');
       })
       .catch((error) => {
         alert('Error!!! CHECK CONSOLE');
@@ -67,7 +67,7 @@ export const SpinWheelSettings = () => {
           <label>Prize</label>
           <label>Color</label>
         </div>
-        {prizes.map((prize, index) => (
+        {prizesArray.map((prize, index) => (
           <div key={index} className={styles.prizeContainer}>
             <input
               type="text"
@@ -83,7 +83,7 @@ export const SpinWheelSettings = () => {
               onChange={(e) => handlePrizeChange(index, 'color', e.target.value)}
               required
             />
-            {prizes.length > 4 && (
+            {prizesArray.length > 4 && (
               <button
                 type="button"
                 className={styles.removeButton}
@@ -94,7 +94,7 @@ export const SpinWheelSettings = () => {
             )}
           </div>
         ))}
-        {prizes.length < 16 && (
+        {prizesArray.length < 16 && (
           <button
             type="button"
             className={styles.addButton}

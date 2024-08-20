@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-// import React from 'react'
 import { useState } from "react"
 import styles from "./saveMail.module.css"
 
@@ -40,7 +39,6 @@ export const SaveMail = () => {
             }
         })
             .then(() => {
-                // console.log(res);
                 setLoading(false);
                 navigate('/');
             })
@@ -124,14 +122,10 @@ export const SaveMail = () => {
                         />
                         <label htmlFor="imgUpload" className={styles.imageInput} id="uploadImageLabel">Choose a Photo</label>
 
-
-
                         <button type="submit">Submit</button>
                     </form>
                 </>
             }
-
-
         </div >
     )
 }

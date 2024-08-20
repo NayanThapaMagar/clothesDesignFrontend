@@ -5,14 +5,12 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     color: #ffffff;
     height: 91vh;
 
 }
 .wholeContainer {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,13 +41,6 @@ table th {
     padding: 8px;
     width: 10em;
 }
-
-/* table tr:nth-child(even) {
-    background-color: #676363;
-} */
-/* table tr {
-    background-color: #676363;
-} */
 
 table tr:hover {
     background-color: #3b3838;

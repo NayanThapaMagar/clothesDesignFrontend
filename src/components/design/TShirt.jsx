@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import styles from "./TShirt.module.css";
 import { Settings } from "./settings";
 
@@ -7,7 +6,6 @@ export const TShirt = () => {
     return (
         <section>
             <h1>PUNK</h1>
-            {/* <div className={'styles.card styles.card_content'}> */}
             <div className={styles.card}>
                 <div className={styles.imgTshirt}>
                     <img

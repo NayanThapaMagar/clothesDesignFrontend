@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 import { Menu } from "./Menu";
@@ -22,14 +21,6 @@ export const Navbar = () => {
                     }
 
                 </div>
-                {/* <div>
-                    <h1>PUNK</h1>
-                </div> */}
-                {/* <div className={styles.account} onClick={() => {
-                    setAccount(!account)
-                    setMenu(false)
-                }}>
-                </div> */}
             </div>
             {
                 menu ? <Menu setMenu={setMenu} /> : null

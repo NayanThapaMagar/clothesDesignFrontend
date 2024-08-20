@@ -5,11 +5,7 @@
     position: relative;
     padding: 30px;
 }
-/* 
-.imgTshirt {
-    height: 300px;
-    width: 400px;
-} */
+
 .memeText {
     position: absolute;
     font-size: 70px;
@@ -18,18 +14,3 @@
     left: 280px;
 }
 
-.options {
-    /* position: absolute; */
-    /* background-color: #ffffff;
-    height: 400px;
-    width: 200px;
-    border: rgb(51, 27, 27) solid 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-.color_dropdown {
-    /* position: absolute;
-    height: 50px;
-    width: 100px; */
-}

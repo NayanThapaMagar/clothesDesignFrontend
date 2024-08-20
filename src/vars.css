@@ -1,11 +1,7 @@
 :root {
     /* Colours */
     --color-text-1: #ffffff;
-    /* --color-text-2: #000000;
-    --color-primary: #000000;
-    --color-secondary: #d2e5fc;
-    --color-dark: #577192;
-    --color-bg: #000000; */
+
     
     --color-top: #1e283a;
 
@@ -13,9 +9,10 @@
     --btncolor-3: #136833;
     --btncolor-2: #3e1d72;
     --btncolor-1: #246d8d;
-    /* --btncolor-g: #55b165;
-    --btncolor-y: #b4af4d;
-    --btncolor-r: #d24242; */
+
+    --textcolor-3: #39de78;
+    --textcolor-2: #7a41d6;
+    --textcolor-1: #45afdd;
   
     /* Fonts */
     --font-roboto: "Roboto";

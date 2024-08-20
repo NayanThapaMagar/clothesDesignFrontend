@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import styles from "./settings.module.css";
 
 export const Settings = () => {
@@ -7,7 +6,6 @@ export const Settings = () => {
     return (
         <section>
             <h2>Settings</h2>
-            {/* <div className={`${styles.settingsContainer} ${styles.card_content}`}> */}
             <div className={styles.settingsContainer}>
                 <div className={styles.colorOptions}>
                     <img

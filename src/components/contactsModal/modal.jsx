@@ -23,7 +23,6 @@ function Modal({ name, email, onClose }) {
             onClose();
         }
     }
-    // console.log(email);
 
     const handleChange = (e) => {
         setDescription(e.target.value);
@@ -31,7 +30,6 @@ function Modal({ name, email, onClose }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log('Description submitted:', description);
         setLoading(true);
         const data = {
             name,

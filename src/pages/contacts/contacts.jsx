@@ -51,10 +51,12 @@ export const Contacts = () => {
 
   const handleSendMail = () => {
     setLoading(true);
-    // Extracting Emails to mailList
-    const mailList = contacts.map(contact => contact.Email);
+    const contactList = contacts.map(contact => ({
+      Name: contact.Name,
+      Email: contact.Email,
+    }));
     const data = {
-      mailList
+      contactList,
     };
     axios.post('http://localhost:5555/sendBulkMail', data)
       .then(() => {
